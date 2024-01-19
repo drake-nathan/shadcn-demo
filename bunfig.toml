@@ -1,0 +1,4 @@
+[install.scopes]
+"@citrus" = "https://artifact.paylocity.com/artifactory/api/npm/npm/"
+"@pcty" = "https://artifact.paylocity.com/artifactory/api/npm/npm/"
+"@datascience" = "https://artifact.paylocity.com/artifactory/api/npm/npm/"
