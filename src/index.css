@@ -1,9 +1,26 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-VariableFont_wdth_wght.ttf") format("truetype");
+  font-weight: 300 800;
+  font-stretch: 75% 100%;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-Italic-VariableFont_wdth_wght.ttf")
+    format("truetype");
+  font-weight: 300 800;
+  font-stretch: 75% 100%;
+  font-style: italic;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    /* shadcn */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -32,10 +49,34 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    /* citrus tokens */
+    --light-grey-070: #96a2ab;
+    --neutral-00: #ffffff;
+    --neutral-01: #a8b2ba;
+    --neutral-01-darkest: #7e8a94;
+    --neutral-01-lighter: #dfe4e8;
+    --neutral-02-light: #42505c;
+    --neutral-060: #323e48;
+    --neutral-100: #000000;
+    --strawberry-070: #cc0821;
+
+    --select-input-background-color: var(--neutral-00);
+    --select-input-border-color: var(--light-grey-070);
+    --select-input-text-color: var(--neutral-100);
+
+    --footnote-text-color: var(--neutral-060);
+    --label-text-color: var(--neutral-060);
+    --placeholder-text-color: var(--neutral-02-light);
+
+    --disabled-background-color: var(--neutral-01-lighter);
+    --disabled-border-color: var(--neutral-01);
+    --disabled-content-color: var(--neutral-01-darkest);
+
+    --error-border-color: var(--strawberry-070);
   }
 
   .dark {
+    /* shadcn */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -63,18 +104,42 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
+    /* citrus tokens */
+    --select-input-background-color: var(--neutral-100);
+    --select-input-border-color: var(--light-grey-070);
+    --select-input-text-color: var(--neutral-00);
+
+    --footnote-text-color: var(--neutral-00);
+    --label-text-color: var(--neutral-00);
+    --placeholder-text-color: var(--neutral-02-light);
+
+    --disabled-background-color: var(--neutral-01-lighter);
+    --disabled-border-color: var(--neutral-01);
+    --disabled-content-color: var(--neutral-01-darkest);
+
+    --error-border-color: var(--strawberry-070);
   }
 
-  .warning {
-    --input: 17 100% 50%;
+  .citrus-disabled {
+    --select-input-text-color: var(--disabled-content-color);
+    --select-input-background-color: var(--disabled-background-color);
+    --select-input-border-color: var(--disabled-border-color);
+    --label-text-color: var(--disabled-content-color);
+    --footnote-text-color: var(--disabled-content-color);
+    --placeholder-text-color: var(--disabled-content-color);
+  }
+
+  .citrus-error {
+    --select-input-border-color: var(--error-border-color);
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply font-sans;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gray-200 dark:bg-gray-800 dark:text-white;
   }
 }

@@ -1,4 +1,5 @@
 {
   "jsonRecursiveSort": true,
-  "plugins": ["prettier-plugin-sort-json", "prettier-plugin-tailwindcss"]
+  "plugins": ["prettier-plugin-sort-json", "prettier-plugin-tailwindcss"],
+  "tailwindFunctions": ["cva"]
 }

@@ -5,16 +5,16 @@ const themeSchema = z.enum(["dark", "light", "system"]);
 
 type Theme = z.infer<typeof themeSchema>;
 
-type ThemeProviderProps = {
+interface ThemeProviderProps {
   children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
-};
+}
 
-type ThemeProviderState = {
+interface ThemeProviderState {
   setTheme: (theme: Theme) => void;
   theme: Theme;
-};
+}
 
 const initialState: ThemeProviderState = {
   setTheme: () => null,

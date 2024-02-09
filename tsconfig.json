@@ -18,6 +18,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ES2020",
+    "types": ["bun"],
     "useDefineForClassFields": true
   },
   "include": ["src"],

@@ -1,11 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./src/**/*.{ts,tsx}"],
   darkMode: ["class"],
   plugins: [require("tailwindcss-animate")],
   prefix: "",
@@ -22,11 +17,6 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
       colors: {
         accent: {
           DEFAULT: "hsl(var(--accent))",
@@ -42,11 +32,20 @@ module.exports = {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
+        footnote: {
+          textColor: "var(--footnote-text-color)",
+        },
         foreground: "hsl(var(--foreground))",
         input: "hsl(var(--input))",
+        label: {
+          textColor: "var(--label-text-color)",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
+        },
+        placeholder: {
+          textColor: "var(--placeholder-text-color)",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -61,6 +60,11 @@ module.exports = {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        select: {
+          backgroundColor: "var(--select-input-background-color)",
+          borderColor: "var(--select-input-border-color)",
+          textColor: "var(--select-input-text-color)",
+        },
       },
       keyframes: {
         "accordion-down": {
@@ -72,6 +76,9 @@ module.exports = {
           to: { height: "0" },
         },
       },
+    },
+    fontFamily: {
+      sans: ["Open Sans", "sans-serif"],
     },
   },
 };
