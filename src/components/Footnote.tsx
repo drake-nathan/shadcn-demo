@@ -1,12 +1,13 @@
-import { cn } from "@/utils";
 import { forwardRef } from "react";
+
+import { cn } from "../utils";
 
 const Footnote = forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ children, className, ...props }, ref) => (
   <p
-    className={cn("text-footnote-textColor p-1 text-xs", className)}
+    className={cn("p-1 text-xs text-footnote-textColor", className)}
     ref={ref}
     {...props}
   >

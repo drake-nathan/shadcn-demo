@@ -28,7 +28,7 @@ export default function App() {
   const [value, setValue] = useState("");
 
   return (
-    <div className="mx-auto flex h-svh w-1/3 flex-col justify-evenly pb-10">
+    <div className="mx-auto flex h-[75svh] w-1/3 flex-col justify-evenly pb-10">
       <ThemeToggle />
 
       {/* Direct consumption of pattern */}
@@ -53,21 +53,19 @@ export default function App() {
           </SelectTrigger>
 
           <SelectContent>
-            <SelectGroup>
-              <SelectItem value="cn">
-                <Avatar className="size-6">
-                  <AvatarImage src="https://github.com/shadcn.png" />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-              </SelectItem>
+            <SelectItem className="h-20" value="cn">
+              <Avatar className="size-6">
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+            </SelectItem>
 
-              <SelectItem value="this dude">
-                <Avatar className="size-6">
-                  <AvatarImage src="https://cdn-icons-png.flaticon.com/512/147/147144.png" />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-              </SelectItem>
-            </SelectGroup>
+            <SelectItem value="this dude">
+              <Avatar className="size-6">
+                <AvatarImage src="https://cdn-icons-png.flaticon.com/512/147/147144.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+            </SelectItem>
           </SelectContent>
         </SelectRoot>
 

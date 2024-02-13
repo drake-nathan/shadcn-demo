@@ -1,5 +1,8 @@
 import type { SelectProps as RadixSelectProps } from "@radix-ui/react-select";
 
+import { cn } from "../../utils";
+import Footnote from "../Footnote";
+import Label from "../Label";
 import {
   SelectContent,
   SelectGroup,
@@ -7,11 +10,7 @@ import {
   SelectRoot,
   SelectTrigger,
   SelectValue,
-} from "@/components/select/shadcn";
-import { cn } from "@/utils";
-
-import Footnote from "../Footnote";
-import Label from "../Label";
+} from "./shadcn";
 
 export interface Option {
   label: string;
@@ -21,6 +20,7 @@ export interface Option {
 export interface SelectProps extends RadixSelectProps {
   className?: string;
   footnote?: string;
+  id?: string;
   label?: string;
   options: Option[];
   placeholder?: string;

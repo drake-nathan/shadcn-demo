@@ -1,5 +1,5 @@
 {
-  "env": { "browser": true, "es2020": true, "node": true },
+  "env": { "browser": true, "es2020": true, "jest": true, "node": true },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -13,6 +13,22 @@
     "prettier"
   ],
   "ignorePatterns": ["dist"],
+  "overrides": [
+    {
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest-formatting/strict",
+        "plugin:jest-dom/recommended",
+        "plugin:testing-library/react"
+      ],
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "plugins": ["jest", "jest-dom", "jest-formatting", "testing-library"],
+      "rules": {}
+    }
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
